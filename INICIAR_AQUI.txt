@@ -1,0 +1,27 @@
+SISTEMA DE GESTIÓN DE BIBLIOTECA ESCOLAR
+GUÍA BREVE DE INSTALACIÓN
+
+REQUISITOS
+- Java 17 o superior
+- IntelliJ IDEA con soporte Maven
+- MySQL Server 8 y MySQL Workbench
+
+1. Abrir la carpeta SistemaBiblioteca en IntelliJ IDEA y cargar el proyecto Maven.
+2. Preparar la base de datos en MySQL Workbench:
+   - Base de datos existente: sql/00_EJECUTAR_AHORA.sql
+   - Base de datos nueva: sql/01_crear_bd_desde_cero.sql y sql/03_datos_demo.sql
+3. Configurar la variable de entorno MYSQL_PASSWORD en Run > Edit Configurations > Main.
+4. Ejecutar org.example.Main.
+
+CUENTAS DE PRUEBA (después de ejecutar el script de datos)
+Bibliotecario: admin@biblioteca.local / Biblioteca2026!
+Estudiante:    estudiante@biblioteca.local / Estudiante2026!
+
+COMPILACIÓN
+Desde Maven: clean package
+Archivo resultante: target/SistemaBiblioteca-1.0.0.jar
+
+NOTAS
+- No publicar contraseñas de la base de datos.
+- El servidor MySQL debe estar activo para realizar operaciones.
+- Consultar README.md para detalles de configuración, estructura y pruebas.
